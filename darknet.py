@@ -207,10 +207,6 @@ class Darknet(pl.LightningModule):
                 conv.weight.data.copy_(conv_weights)
 
     def save_darknet_weights(self, path, cutoff=-1):
-        """
-            @:param path    - path of the new weights file
-            @:param cutoff  - save layers between 0 and cutoff (cutoff = -1 -> all are saved)
-        """
         fp = open(path, "wb")
         self.header_info[3] = self.seen
         self.header_info.tofile(fp)
