@@ -140,4 +140,7 @@ train_eval_loader = DataLoader(
     drop_last=False,
 )
 
+for x in train_loader:
+    print(x)
+
 

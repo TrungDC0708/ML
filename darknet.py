@@ -229,3 +229,4 @@ class Darknet(pl.LightningModule):
                 conv_layer.weight.data.cpu().numpy().tofile(fp)
 
         fp.close()
+
